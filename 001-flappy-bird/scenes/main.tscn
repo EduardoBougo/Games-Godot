@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dplsjwrs1x7gs"]
+
+[ext_resource type="Texture2D" uid="uid://b7hibw16yfdti" path="res://assets/bg.png" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://csrrfnfw0k4j4" path="res://scenes/main.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://7txf8q6wej2o" path="res://scenes/player.tscn" id="3_jyhfs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(720, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
+size = Vector2(720, 20)
+
+[node name="Main" type="Node" unique_id=1141648866]
+script = ExtResource("1_sugp2")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=34060738]
+position = Vector2(360.00003, 240)
+scale = Vector2(0.8333333, 0.625)
+texture = ExtResource("1_o5qli")
+
+[node name="Player" parent="." unique_id=233651698 instance=ExtResource("3_jyhfs")]
+
+[node name="PipeSpawner" type="Timer" parent="." unique_id=2045848717]
+wait_time = 2.0
+autostart = true
+
+[node name="LevelLimits" type="Area2D" parent="." unique_id=2050257864]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelLimits" unique_id=1853383349]
+position = Vector2(360, -8)
+shape = SubResource("RectangleShape2D_tbgi4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelLimits" unique_id=1201770970]
+position = Vector2(360, 490)
+shape = SubResource("RectangleShape2D_tefeu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=247057707]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=377081522]
+offset_left = 299.0
+offset_top = 21.0
+offset_right = 421.0
+offset_bottom = 57.0
+
+[node name="OverLabel" type="Label" parent="CanvasLayer" unique_id=255708699]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Fim de jogo"
+
+[connection signal="timeout" from="PipeSpawner" to="." method="_on_pipe_spawner_timeout"]
+[connection signal="body_entered" from="LevelLimits" to="." method="_on_level_limits_body_entered"]
