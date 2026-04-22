@@ -13,3 +13,7 @@ func _process(delta):
 func _on_body_entered(_body):
 	# Quando qualquer corpo entrar na area, emite o sinal "hit"
 	hit.emit() 
+
+
+func _on_hit() -> void:
+	pass # Replace with function body.

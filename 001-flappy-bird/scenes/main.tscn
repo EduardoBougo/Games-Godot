@@ -44,9 +44,14 @@ offset_bottom = 57.0
 
 [node name="OverLabel" type="Label" parent="CanvasLayer" unique_id=255708699]
 visible = false
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 212.0
+offset_top = 23.0
+offset_right = 311.0
+offset_bottom = 46.0
+scale = Vector2(3, 3)
+size_flags_stretch_ratio = 0.0
 text = "Fim de jogo"
+uppercase = true
 
 [connection signal="timeout" from="PipeSpawner" to="." method="_on_pipe_spawner_timeout"]
 [connection signal="body_entered" from="LevelLimits" to="." method="_on_level_limits_body_entered"]
