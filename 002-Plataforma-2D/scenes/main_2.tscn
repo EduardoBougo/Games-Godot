@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dwbalsiaox6ml"]
+
+[ext_resource type="PackedScene" uid="uid://br4mr8j1w2sl" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://ctofnhdawiter" path="res://scenes/mapa.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://c7p552dtm83ap" path="res://scenes/slime_green.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cutj3jk5xi5m" path="res://scenes/kill_zone.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://f4ijvm8h103c" path="res://scenes/coin.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://cwm2621yl6ehu" path="res://scenes/hud.tscn" id="6_tefeu"]
+[ext_resource type="FontFile" uid="uid://cuh00ductlse2" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_ywx0f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbgi4"]
+distance = -290.0
+
+[node name="Main_1" type="Node" unique_id=385654222]
+
+[node name="Mapa" parent="." unique_id=2082141820 instance=ExtResource("1_sugp2")]
+position = Vector2(2, 1)
+
+[node name="Player" parent="." unique_id=1200227298 instance=ExtResource("1_nnsk1")]
+position = Vector2(1772, 16)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=787602461]
+position = Vector2(2, 1)
+
+[node name="Slime green" parent="Enemies" unique_id=23680784 instance=ExtResource("3_jyhfs")]
+position = Vector2(738, 216)
+
+[node name="Slime green2" parent="Enemies" unique_id=868170603 instance=ExtResource("3_jyhfs")]
+position = Vector2(704, 204)
+
+[node name="Coins" type="Node2D" parent="." unique_id=2077463864]
+
+[node name="Coin" parent="Coins" unique_id=1504505714 instance=ExtResource("5_tbgi4")]
+position = Vector2(362, 150)
+
+[node name="Coin2" parent="Coins" unique_id=1172533595 instance=ExtResource("5_tbgi4")]
+position = Vector2(298, 150)
+
+[node name="Coin3" parent="Coins" unique_id=325280265 instance=ExtResource("5_tbgi4")]
+position = Vector2(332, 152)
+
+[node name="Coin4" parent="Coins" unique_id=2090667530 instance=ExtResource("5_tbgi4")]
+position = Vector2(879, 262)
+
+[node name="Coin5" parent="Coins" unique_id=2044803967 instance=ExtResource("5_tbgi4")]
+position = Vector2(761, 214)
+
+[node name="Coin6" parent="Coins" unique_id=1215669733 instance=ExtResource("5_tbgi4")]
+position = Vector2(1186, 211)
+
+[node name="Coin7" parent="Coins" unique_id=38635122 instance=ExtResource("5_tbgi4")]
+position = Vector2(1251, 195)
+
+[node name="Coin8" parent="Coins" unique_id=1362527889 instance=ExtResource("5_tbgi4")]
+position = Vector2(1315, 177)
+
+[node name="Coin9" parent="Coins" unique_id=634306881 instance=ExtResource("5_tbgi4")]
+position = Vector2(1362, 161)
+
+[node name="Coin10" parent="Coins" unique_id=275542979 instance=ExtResource("5_tbgi4")]
+position = Vector2(1426, 146)
+
+[node name="Coin11" parent="Coins" unique_id=863426809 instance=ExtResource("5_tbgi4")]
+position = Vector2(1490, 129)
+
+[node name="KillZone" parent="." unique_id=1067593991 instance=ExtResource("4_jyhfs")]
+morte_instantanea = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1579991349]
+shape = SubResource("WorldBoundaryShape2D_tbgi4")
+
+[node name="HUD" parent="." unique_id=811450515 instance=ExtResource("6_tefeu")]
+
+[node name="Label" type="Label" parent="." unique_id=331515128]
+offset_left = 1554.0
+offset_top = 112.0
+offset_right = 1698.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("7_ywx0f")
+text = "Algo aqui?
+"

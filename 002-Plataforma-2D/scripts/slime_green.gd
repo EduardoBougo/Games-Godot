@@ -32,6 +32,9 @@ func _physics_process(delta: float) -> void:
 	
 	else:
 		await get_tree().create_timer(2.0).timeout
+		
+		Global.points += 500
+		
 		queue_free()
 
 

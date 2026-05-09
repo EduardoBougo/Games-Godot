@@ -179,9 +179,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jej6c")
 }],
-"loop": true,
+"loop": false,
 "name": &"hit",
-"speed": 8.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -286,7 +286,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur7pv"]
 size = Vector2(12, 18)
 
-[node name="Player" type="CharacterBody2D" unique_id=1200227298]
+[node name="Player" type="CharacterBody2D" unique_id=1200227298 groups=["player"]]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_g2els")
@@ -295,10 +295,8 @@ script = ExtResource("1_g2els")
 position = Vector2(0, -13)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_smehm")
-animation = &"death"
+animation = &"hit"
 autoplay = "idle"
-frame = 3
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1919584979]
 position = Vector2(-1, -10)

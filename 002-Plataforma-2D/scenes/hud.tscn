@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cwm2621yl6ehu"]
+
+[ext_resource type="Texture2D" uid="uid://jjdq05p8fv2v" path="res://assets/sprites/coin.png" id="1_5ysmq"]
+[ext_resource type="Script" uid="uid://lm5isy5h6rdv" path="res://scripts/hud.gd" id="1_6fi6k"]
+[ext_resource type="FontFile" uid="uid://cjymg0lphnp2a" path="res://assets/fonts/PixelOperator8.ttf" id="2_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://bhbtnmcvw70lc" path="res://assets/sprites/heart_16x16.png" id="3_uo2fv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
+atlas = ExtResource("1_5ysmq")
+region = Rect2(96, 0, 16, 16)
+
+[node name="HUD" type="Node" unique_id=811450515]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=495722180]
+script = ExtResource("1_6fi6k")
+
+[node name="Control" type="Control" parent="HUD" unique_id=287361312]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control" unique_id=1018753408]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="itens" type="HBoxContainer" parent="HUD/Control/MarginContainer" unique_id=719898016]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="moedas_sprite" type="TextureRect" parent="HUD/Control/MarginContainer/itens" unique_id=1977272648]
+layout_mode = 2
+texture = SubResource("AtlasTexture_047uy")
+expand_mode = 2
+
+[node name="moedas_contador" type="Label" parent="HUD/Control/MarginContainer/itens" unique_id=22536002]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6fi6k")
+text = "0x"
+
+[node name="vida_sprite" type="TextureRect" parent="HUD/Control/MarginContainer/itens" unique_id=2020816222]
+layout_mode = 2
+texture = ExtResource("3_uo2fv")
+expand_mode = 2
+
+[node name="vida_contador" type="Label" parent="HUD/Control/MarginContainer/itens" unique_id=1242258443]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6fi6k")
+text = "3x"
+
+[node name="timer" type="HBoxContainer" parent="HUD/Control/MarginContainer" unique_id=658397130]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="timer" type="Label" parent="HUD/Control/MarginContainer/timer" unique_id=109120493]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_6fi6k")
+text = "999
+"
+
+[node name="Timer" type="Timer" parent="HUD/Control/MarginContainer/timer" unique_id=1770927037]
+wait_time = 100.0
+one_shot = true
+autostart = true
+
+[node name="pontuacao" type="HBoxContainer" parent="HUD/Control/MarginContainer" unique_id=2033384986]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="pontos_texto" type="Label" parent="HUD/Control/MarginContainer/pontuacao" unique_id=1488646083]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6fi6k")
+text = "Pontos:"
+
+[node name="pontos_contador" type="Label" parent="HUD/Control/MarginContainer/pontuacao" unique_id=1433364118]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6fi6k")
+text = "0000"
+
+[connection signal="timeout" from="HUD/Control/MarginContainer/timer/Timer" to="HUD" method="_on_timer_timeout"]
