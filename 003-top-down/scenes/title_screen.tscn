@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://6qo1c8tjhwcp"]
+
+[ext_resource type="FontFile" uid="uid://dme2ultymywpy" path="res://fonts/wheaton_capitals.otf" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://1k3tc6mk2kjf" path="res://scripts/title_screen.gd" id="1_sa3yf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sa3yf"]
+bg_color = Color(0, 0.22352941, 0.7882353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4lrb"]
+bg_color = Color(0.28235295, 0.15686275, 0.8392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgrm8"]
+bg_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dc4i4"]
+bg_color = Color(0, 0.22352941, 0.7882353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="Theme" id="Theme_s4lrb"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("1_fgkus")
+Button/styles/focus = SubResource("StyleBoxFlat_sa3yf")
+Button/styles/hover = SubResource("StyleBoxFlat_s4lrb")
+Button/styles/normal = SubResource("StyleBoxFlat_mgrm8")
+Button/styles/pressed = SubResource("StyleBoxFlat_dc4i4")
+
+[node name="Control" type="Control" unique_id=1536714657]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sa3yf")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=750816076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 70
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=526299080]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="menu_buttons" type="VBoxContainer" parent="MarginContainer" unique_id=1282229889]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 50
+
+[node name="Button_start" type="Button" parent="MarginContainer/menu_buttons" unique_id=1663479840]
+layout_mode = 2
+theme = SubResource("Theme_s4lrb")
+theme_override_font_sizes/font_size = 90
+text = "START GAME"
+
+[node name="Button_exit" type="Button" parent="MarginContainer/menu_buttons" unique_id=1780059034]
+layout_mode = 2
+theme = SubResource("Theme_s4lrb")
+theme_override_font_sizes/font_size = 90
+text = "QUIT
+
+"
+
+[connection signal="pressed" from="MarginContainer/menu_buttons/Button_start" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="MarginContainer/menu_buttons/Button_exit" to="." method="_on_button_exit_pressed"]

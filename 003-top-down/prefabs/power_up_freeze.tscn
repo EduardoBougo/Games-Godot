@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bdh1gsje7bfdk"]
+
+[ext_resource type="PackedScene" uid="uid://bj28pc2hk7ovy" path="res://prefabs/power_up.tscn" id="1_xyrif"]
+[ext_resource type="Texture2D" uid="uid://gkxw1eygk84g" path="res://assets/Player.png" id="2_bar2f"]
+
+[node name="power_up" unique_id=265548093 instance=ExtResource("1_xyrif")]
+rotation = 0.7853982
+type = "freeze"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="0" unique_id=729622057]
+modulate = Color(0, 1, 1, 1)
+rotation = 0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_bar2f")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1883064588]
+modulate = Color(0, 1, 1, 1)

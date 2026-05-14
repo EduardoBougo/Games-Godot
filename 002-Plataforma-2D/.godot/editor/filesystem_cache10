@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778356630
+::res://::1778465549
 icon.svg::CompressedTexture2D::7081393343536532460::1778097656::1778097659::1::::<><><>0<>0<>c01b6b2a83ce2b16dbc2d1c633949e60<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1778273626
 ::res://assets/fonts/::1778098791
@@ -32,17 +32,18 @@ _Complete_static_BG_(288 x 208).png::CompressedTexture2D::1492477438778937340::1
 3 - Cloud_cover_1.png::CompressedTexture2D::175342365938772514::1778242553::1778242775::1::::<><><>0<>0<>c972733ed8cf18b861b9ec4ce4eec1fc<>res://.godot/imported/3 - Cloud_cover_1.png-ae056208d5ba06e0a961cbd777a50578.ctex::
 4 - Cloud_cover_2.png::CompressedTexture2D::3882051215977218005::1778242553::1778242775::1::::<><><>0<>0<>549e5d77293ba7a820fcd7b025595714<>res://.godot/imported/4 - Cloud_cover_2.png-6b06ddd997a20564f3e64b19fcf4c157.ctex::
 5 - Sky_color.png::CompressedTexture2D::4896433561991786725::1778242553::1778242775::1::::<><><>0<>0<>dbdb065d165cbbc9543ee16231a4872a<>res://.godot/imported/5 - Sky_color.png-17c4efa9853137d74d1e03a91f5dd148.ctex::
-::res://scenes/::1778356627
-bandeira_final.tscn::PackedScene::2271697908758580279::1778356627::0::1::::<><><>0<>0<><>::uid://cmc3yk7rx0sog::::res://area_2d.gd<>uid://kd711n3ndxtp::::res://assets/sprites/flag animation.png
+::res://scenes/::1778357614
+bandeira_final.tscn::PackedScene::2271697908758580279::1778357614::0::1::::<><><>0<>0<><>::uid://cmc3yk7rx0sog::::res://scripts/area_2d.gd<>uid://kd711n3ndxtp::::res://assets/sprites/flag animation.png
 coin.tscn::PackedScene::411314104182952318::1778347607::0::1::::<><><>0<>0<><>::uid://bua7ipkempnpo::::res://scripts/coin.gd<>uid://jjdq05p8fv2v::::res://assets/sprites/coin.png
 hud.tscn::PackedScene::6343464638289120058::1778356542::0::1::::<><><>0<>0<><>::uid://jjdq05p8fv2v::::res://assets/sprites/coin.png<>uid://lm5isy5h6rdv::::res://scripts/hud.gd<>uid://cjymg0lphnp2a::::res://assets/fonts/PixelOperator8.ttf<>uid://bhbtnmcvw70lc::::res://assets/sprites/heart_16x16.png
 kill_zone.tscn::PackedScene::182836422417369536::1778290778::0::1::::<><><>0<>0<><>::uid://wuhalvq2bim8::::res://scripts/kill_zone.gd
-main.tscn::PackedScene::3914000667344852662::1778356656::0::1::::<><><>0<>0<><>::uid://br4mr8j1w2sl::::res://scenes/player.tscn<>uid://ctofnhdawiter::::res://scenes/mapa.tscn<>uid://c7p552dtm83ap::::res://scenes/slime_green.tscn<>uid://cutj3jk5xi5m::::res://scenes/kill_zone.tscn<>uid://f4ijvm8h103c::::res://scenes/coin.tscn<>uid://cwm2621yl6ehu::::res://scenes/hud.tscn<>uid://7mosd0udxwjf::::res://scenes/bandeira_final.tscn
+main_1.tscn::PackedScene::3914000667344852662::1778357051::0::1::::<><><>0<>0<><>::uid://br4mr8j1w2sl::::res://scenes/player.tscn<>uid://ctofnhdawiter::::res://scenes/mapa.tscn<>uid://c7p552dtm83ap::::res://scenes/slime_green.tscn<>uid://cutj3jk5xi5m::::res://scenes/kill_zone.tscn<>uid://f4ijvm8h103c::::res://scenes/coin.tscn<>uid://cwm2621yl6ehu::::res://scenes/hud.tscn<>uid://7mosd0udxwjf::::res://scenes/bandeira_final.tscn
+main_2.tscn::PackedScene::8705501590401416119::1778356894::0::1::::<><><>0<>0<><>::uid://br4mr8j1w2sl::::res://scenes/player.tscn<>uid://ctofnhdawiter::::res://scenes/mapa.tscn<>uid://c7p552dtm83ap::::res://scenes/slime_green.tscn<>uid://cutj3jk5xi5m::::res://scenes/kill_zone.tscn<>uid://f4ijvm8h103c::::res://scenes/coin.tscn<>uid://cwm2621yl6ehu::::res://scenes/hud.tscn<>uid://cuh00ductlse2::::res://assets/fonts/PixelOperator8-Bold.ttf
 mapa.tscn::PackedScene::6135657857677850437::1778294147::0::1::::<><><>0<>0<><>::uid://hobsqrcxi046::::res://assets/sprites/world_tileset.png<>uid://6sdxp8e005rq::::res://assets/sprites/world_tileset_com bordas_quadradas.png<>uid://cb04ssp607h54::::res://assets/sprites/Background_parts_01/5 - Sky_color.png<>uid://bvkq20x6b12v6::::res://assets/sprites/Background_parts_01/4 - Cloud_cover_2.png<>uid://cq64l2hktrlq::::res://assets/sprites/Background_parts_01/3 - Cloud_cover_1.png
 player.tscn::PackedScene::107066432094193035::1778354762::0::1::::<><><>0<>0<><>::uid://bcklod2in7dx1::::res://scripts/player.gd<>uid://bx3kkq3kgo48e::::res://assets/sprites/knight.png
 slime_green.tscn::PackedScene::7051726537359781479::1778351398::0::1::::<><><>0<>0<><>::uid://coilxettqf0af::::res://assets/sprites/slime_green.png<>uid://db5ar4h1qe5d5::::res://scripts/slime_green.gd<>uid://cutj3jk5xi5m::::res://scenes/kill_zone.tscn
-::res://scripts/::1778356630
-area_2d.gd::GDScript::5620979756873273346::1778356497::0::1::::<>Area2D<><>0<>0<><>::
+::res://scripts/::1778357614
+area_2d.gd::GDScript::5620979756873273346::1778357614::0::1::::<>Area2D<><>0<>0<><>::
 coin.gd::GDScript::3792155590070193912::1778354922::0::1::::<>Area2D<><>0<>0<><>::
 global.gd::GDScript::2944840700568525568::1778354502::0::1::::<>Node<><>0<>0<><>::
 hud.gd::GDScript::798686593070570471::1778355844::0::1::::<>CanvasLayer<><>0<>0<><>::

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c784rthynlna2"]
+
+[ext_resource type="PackedScene" uid="uid://cjm8nm5aog44d" path="res://entities/player.tscn" id="1_ekubr"]
+[ext_resource type="Script" uid="uid://cwrrjrqb1kam6" path="res://scripts/mapa.gd" id="1_u1vf7"]
+[ext_resource type="PackedScene" uid="uid://r15l3thg7nq2" path="res://entities/enemy.tscn" id="2_u1vf7"]
+[ext_resource type="PackedScene" uid="uid://bt5s3pvb7b5wa" path="res://prefabs/hud.tscn" id="4_nrd35"]
+[ext_resource type="PackedScene" uid="uid://bj28pc2hk7ovy" path="res://prefabs/power_up.tscn" id="5_atgyb"]
+
+[sub_resource type="Environment" id="Environment_u1vf7"]
+background_mode = 3
+glow_enabled = true
+glow_levels/1 = 5.0
+glow_levels/2 = 3.5
+glow_levels/3 = 1.0
+glow_levels/4 = 0.0
+glow_levels/5 = 1.0
+glow_normalized = true
+glow_strength = 1.5
+glow_mix = 0.25
+glow_bloom = 0.5
+glow_blend_mode = 4
+
+[node name="Mapa" type="Node2D" unique_id=1812079426]
+script = ExtResource("1_u1vf7")
+enemy_scene = ExtResource("2_u1vf7")
+
+[node name="Player" parent="." unique_id=2104401172 instance=ExtResource("1_ekubr")]
+position = Vector2(937, 499)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1011222567]
+environment = SubResource("Environment_u1vf7")
+
+[node name="spawn_timer" type="Timer" parent="." unique_id=194438478]
+wait_time = 2.0
+
+[node name="HUD" parent="." unique_id=356245058 instance=ExtResource("4_nrd35")]
+
+[node name="power_up" parent="." unique_id=265548093 instance=ExtResource("5_atgyb")]
+position = Vector2(512, 595)
+
+[node name="power_up_spawn_timer" type="Timer" parent="." unique_id=1859904091]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="power_up_spawn_timer" to="." method="_on_power_up_spawn_timer_timeout"]

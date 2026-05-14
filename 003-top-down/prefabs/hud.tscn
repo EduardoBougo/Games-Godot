@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://bt5s3pvb7b5wa"]
+
+[ext_resource type="Script" uid="uid://cwcuu2u0sa344" path="res://scripts/hud.gd" id="1_3ehsa"]
+[ext_resource type="FontFile" uid="uid://dme2ultymywpy" path="res://fonts/wheaton_capitals.otf" id="1_73jnp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ehsa"]
+bg_color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_448xx"]
+bg_color = Color(0.15686275, 0.92156863, 0.2784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7ypv"]
+bg_color = Color(0.078431375, 0.078431375, 0.078431375, 0.8117647)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_env85"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4lrb"]
+bg_color = Color(0, 0.22352941, 0.7882353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sa3yf"]
+bg_color = Color(0.28235295, 0.15686275, 0.8392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fgkus"]
+bg_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgrm8"]
+bg_color = Color(0, 0.22352941, 0.7882353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="Theme" id="Theme_mbxvq"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("1_73jnp")
+Button/styles/focus = SubResource("StyleBoxFlat_s4lrb")
+Button/styles/hover = SubResource("StyleBoxFlat_sa3yf")
+Button/styles/normal = SubResource("StyleBoxFlat_fgkus")
+Button/styles/pressed = SubResource("StyleBoxFlat_mgrm8")
+
+[node name="HUD" type="CanvasLayer" unique_id=356245058]
+script = ExtResource("1_3ehsa")
+
+[node name="main_hud" type="MarginContainer" parent="." unique_id=192114489]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="wave_label" type="Label" parent="main_hud" unique_id=325717389]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_73jnp")
+theme_override_font_sizes/font_size = 48
+text = "WAVE:"
+
+[node name="score_label" type="Label" parent="main_hud" unique_id=1613163112]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_73jnp")
+theme_override_font_sizes/font_size = 48
+text = "SCORE:"
+
+[node name="player_health_bar" type="ProgressBar" parent="main_hud" unique_id=1535139811]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_3ehsa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_448xx")
+step = 1.0
+value = 50.0
+
+[node name="game_over" type="MarginContainer" parent="." unique_id=353204656]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="game_over" unique_id=1948300631]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d7ypv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="game_over" unique_id=206760683]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="actual_score" type="Label" parent="game_over/VBoxContainer" unique_id=234307077]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_73jnp")
+theme_override_font_sizes/font_size = 48
+text = "SCORE:"
+
+[node name="high_score" type="Label" parent="game_over/VBoxContainer" unique_id=1239434204]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_73jnp")
+theme_override_font_sizes/font_size = 48
+text = "HIGH SCORE:"
+
+[node name="HSeparator" type="HSeparator" parent="game_over/VBoxContainer" unique_id=509765758]
+layout_mode = 2
+theme_override_constants/separation = 30
+theme_override_styles/separator = SubResource("StyleBoxEmpty_env85")
+
+[node name="Restart_Button" type="Button" parent="game_over/VBoxContainer" unique_id=1171621353]
+layout_mode = 2
+theme = SubResource("Theme_mbxvq")
+theme_override_font_sizes/font_size = 60
+text = "TRY AGAIN"
+
+[connection signal="pressed" from="game_over/VBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]

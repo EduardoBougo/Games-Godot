@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://blsviatl5qwok"]
+
+[ext_resource type="PackedScene" uid="uid://bj28pc2hk7ovy" path="res://prefabs/power_up.tscn" id="1_dgw5h"]
+
+[node name="power_up" unique_id=265548093 instance=ExtResource("1_dgw5h")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1883064588]
+modulate = Color(0.85882354, 0, 0, 1)
